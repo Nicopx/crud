@@ -1,4 +1,5 @@
 <?php
+include("includes/navbar.php");
     if(!isset($_GET["id"])) exit();
     $id = $_GET["id"];
     include_once "cn.php";

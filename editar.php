@@ -10,16 +10,10 @@ if($persona === FALSE){
 	echo "¡No existe alguna persona con ese ID!";
 	exit();
 }
-
 #Si la persona existe, se ejecuta esta parte del código
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Registrar persona</title>
-</head>
-<body>
+
+<?php include("includes/header.php")?>
 	<form method="post" action="saveEditData.php">
 		<!-- Ocultamos el ID para que el usuario no pueda cambiarlo (en teoría) -->
 		<input type="hidden" name="id" value="<?php echo $persona->ID; ?>">
@@ -34,7 +28,7 @@ if($persona === FALSE){
         <br><br>
         <input value="<?php echo $persona->Mail ?>" name="mail" required type="text" id="mail" placeholder="Escribe mail...">
 		<br><br>
-		<br><br><input type="submit" value="Guardar cambios">
+		<button type="submit" class="btn btn-primary">Guardar Cambios</button>
 	</form>
 </body>
 </html>
