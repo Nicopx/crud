@@ -1,6 +1,6 @@
 <?php
 
-#Salir si alguno de los datos no está presente
+#Sale si alguno de los datos no está presente
 if(
 	!isset($_POST["nombre"]) || 
 	!isset($_POST["apellido"]) || 
@@ -8,9 +8,10 @@ if(
 	!isset($_POST["id"])
 ) exit();
 
-#Si todo va bien, se ejecuta esta parte del código...
+#Si no.
 
 include_once "cn.php";
+#guardo los datos que llegan mediante el post
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellido"];

@@ -1,12 +1,14 @@
 <?php
 include_once "cn.php";
+#preparo la consulta a la bd
 $sentencia = $mbd->query("SELECT * FROM datos;");
+#ejecuto la sentencia y guardo los datos en la var personas
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
-<!--Recordemos que podemos intercambiar HTML y PHP como queramos-->
+
 <?php include("includes/header.php")?>
 <?php include("includes/navbar.php")?>
-	<table class="striped">
+	<table class="centered">
 		<thead>
 			<tr>
 				<th>ID</th>

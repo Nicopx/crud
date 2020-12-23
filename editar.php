@@ -1,9 +1,9 @@
 <?php
-if(!isset($_GET["id"])) exit();
+if(!isset($_GET["id"])) exit();#chequo que exista el id
 $id = $_GET["id"];
 include_once "cn.php";
-$sentencia = $mbd->prepare("SELECT * FROM datos WHERE id = ?;");
-$sentencia->execute([$id]);
+$sentencia = $mbd->prepare("SELECT * FROM datos WHERE id = ?;");#preparo la consulta
+$sentencia->execute([$id]); #la ejecuto pasandole el id que llega
 $persona = $sentencia->fetch(PDO::FETCH_OBJ);
 if($persona === FALSE){
 	#No existe
