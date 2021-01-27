@@ -20,13 +20,13 @@ if($persona === FALSE){
 
 		<label for="nombre">Nombre:</label>
 		<br>
-		<input value="<?php echo $persona->Nombre ?>" name="nombre" required type="text" id="nombre" placeholder="Escribí tu nombre...">
+		<input value="<?php echo $persona->Nombre ?>" name="nombre" type="text" id="nombre" placeholder="Escribí tu nombre..." required>
 		<br><br>
 		<label for="apellido">Apellido:</label>
 		<br>
-		<input value="<?php echo $persona->Apellido ?>" name="apellido" required type="text" id="apellido" placeholder="Escribí tu apellido...">
+		<input value="<?php echo $persona->Apellido ?>" name="apellido" type="text" id="apellido" placeholder="Escribí tu apellido..." required>
         <br><br>
-        <input value="<?php echo $persona->Mail ?>" name="mail" required type="text" id="mail" placeholder="Escribe mail...">
+        <input value="<?php echo $persona->Mail ?>" name="mail" type="text" id="mail" placeholder="Escribe mail..."required>
 		<br><br>
 		<button type="submit" class="btn btn-primary">Guardar Cambios</button>
 	</form>

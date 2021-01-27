@@ -8,8 +8,6 @@ if(
 	!isset($_POST["id"])
 ) exit();
 
-#Si no.
-
 include_once "cn.php";
 #guardo los datos que llegan mediante el post
 $id = $_POST["id"];
@@ -18,7 +16,7 @@ $apellidos = $_POST["apellido"];
 $mail = $_POST["mail"];
 
 $sentencia = $mbd->prepare("UPDATE datos SET nombre = ?, apellido = ?, mail = ? WHERE id = ?;");
-$resultado = $sentencia->execute([$nombre, $apellidos, $mail, $id]); # Pasar en el mismo orden de los ?
+$resultado = $sentencia->execute([$nombre, $apellidos, $mail, $id]); # Pasar en el mismo orden.
 if($resultado === TRUE) header("Location: listpeople.php");
 #header("Location: listpeople.php");
 else echo '<script language="javascript">alert("Algo salió mal. Por favor verifica que la tabla exista, así como el ID del usuario!");</script>';
